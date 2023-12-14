@@ -1,11 +1,11 @@
-FROM ueransim-base AS builder
+FROM filipe1417/ueransim-base AS builder
 FROM ubuntu:20.04
 
 LABEL maintainer="raoufkh <khichane.araouf@gmail.com>"
 
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install iproute2 traceroute curl iputils-ping dnsutils
+RUN apt-get -y install iproute2 traceroute curl iputils-ping vim
 
 WORKDIR /ueransim
 
